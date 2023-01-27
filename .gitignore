@@ -1,3 +1,6 @@
 .idea/
-
+.config/
 venv/
+*/migrations
+__pycache__/
+.DS_Store
