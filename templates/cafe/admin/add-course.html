@@ -1,0 +1,52 @@
+{% extends 'cafe/admin/base.html' %}
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>منو</h2>
+                <p>اضافه‌کردن وعده غذایی</p>
+            </div>
+        </div>
+        <div class="container" data-aos="fade-up">
+            <div class="row mt-5">
+                <div class="col-12 mt-5 mt-lg-0">
+                    <form method="post" role="form" class="add-form" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name"
+                                       placeholder="نام وعده غذایی"
+                                       required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <select name="course" id="course" required class="form-control form-select">
+                                    <option selected disabled>نوع وعده غذایی</option>
+                                    {% for course in courses %}
+                                        <option value="{{ course }}">{{ course }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <div class="mb-3">
+                                <label for="image" class="form-label">عکس وعده غذایی</label>
+                                <input class="form-control" type="file" id="image" required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="description" id="description" rows="8" placeholder="توضیحات وعده غذایی"
+                                      ></textarea>
+                        </div>
+                        {% csrf_token %}
+                        <div class="text-center">
+                            <button type="submit">ثبت</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -28,18 +28,10 @@
                 </div>
             </div>
 
-            <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="row menu-container" data-aos="fade-up" data-aos-delay="200" id="menu-items">
                 <!-- Coffee -->
                 {% for coffee in coffees %}
-                    <div class="col-lg-6 menu-item filter-coffee">
-                    <img src="{{ coffee.image.url }}" class="menu-img" alt="">
-                    <div class="menu-content">
-                        <a href="#">{{ coffee.name }}</a><span>{{ coffee.price }} تومان</span>
-                    </div>
-                    <div class="menu-ingredients">
-                        {{ coffee.description }}
-                    </div>
-                </div>
+
                 {% endfor %}
 
                 <div class="col-lg-6 menu-item filter-coffee">
@@ -146,4 +138,14 @@
 
         </div>
     </section><!-- End Menu Section -->
+{% endblock %}
+{% block end_scripts %}
+<script src="{% static 'cafe/menu.js' %}"></script>
+    <script>
+        $(document).ready(function () {
+            console.log('AA');
+            let menuItems = $("#menu-items");
+            $.getJSON({% url 'cafe-menu-courses-api' %})
+        });
+    </script>
 {% endblock %}

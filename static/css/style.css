@@ -1148,15 +1148,15 @@ section {
 /*--------------------------------------------------------------
 # Book A Table
 --------------------------------------------------------------*/
-.book-a-table .php-email-form {
+.book-a-table .add-form {
   width: 100%;
 }
 
-.book-a-table .php-email-form .form-group {
+.book-a-table .add-form .form-group {
   padding-bottom: 8px;
 }
 
-.book-a-table .php-email-form .validate {
+.book-a-table .add-form .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
@@ -1164,7 +1164,7 @@ section {
   font-size: 13px;
 }
 
-.book-a-table .php-email-form .error-message {
+.book-a-table .add-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -1173,11 +1173,11 @@ section {
   font-weight: 600;
 }
 
-.book-a-table .php-email-form .error-message br + br {
+.book-a-table .add-form .error-message br + br {
   margin-top: 25px;
 }
 
-.book-a-table .php-email-form .sent-message {
+.book-a-table .add-form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1186,13 +1186,13 @@ section {
   font-weight: 600;
 }
 
-.book-a-table .php-email-form .loading {
+.book-a-table .add-form .loading {
   display: none;
   text-align: center;
   padding: 15px;
 }
 
-.book-a-table .php-email-form .loading:before {
+.book-a-table .add-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1205,7 +1205,7 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.book-a-table .php-email-form input, .book-a-table .php-email-form textarea {
+.book-a-table .add-form input, .book-a-table .add-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
@@ -1214,31 +1214,31 @@ section {
   color: white;
 }
 
-.book-a-table .php-email-form input::-webkit-input-placeholder, .book-a-table .php-email-form textarea::-webkit-input-placeholder {
+.book-a-table .add-form input::-webkit-input-placeholder, .book-a-table .add-form textarea::-webkit-input-placeholder {
   color: #a49b89;
 }
 
-.book-a-table .php-email-form input::-moz-placeholder, .book-a-table .php-email-form textarea::-moz-placeholder {
+.book-a-table .add-form input::-moz-placeholder, .book-a-table .add-form textarea::-moz-placeholder {
   color: #a49b89;
 }
 
-.book-a-table .php-email-form input::placeholder, .book-a-table .php-email-form textarea::placeholder {
+.book-a-table .add-form input::placeholder, .book-a-table .add-form textarea::placeholder {
   color: #a49b89;
 }
 
-.book-a-table .php-email-form input:focus, .book-a-table .php-email-form textarea:focus {
+.book-a-table .add-form input:focus, .book-a-table .add-form textarea:focus {
   border-color: #cda45e;
 }
 
-.book-a-table .php-email-form input {
+.book-a-table .add-form input {
   height: 44px;
 }
 
-.book-a-table .php-email-form textarea {
+.book-a-table .add-form textarea {
   padding: 10px 12px;
 }
 
-.book-a-table .php-email-form button[type="submit"] {
+.book-a-table .add-form button[type="submit"] {
   background: #cda45e;
   border: 0;
   padding: 10px 35px;
@@ -1247,7 +1247,7 @@ section {
   border-radius: 50px;
 }
 
-.book-a-table .php-email-form button[type="submit"]:hover {
+.book-a-table .add-form button[type="submit"]:hover {
   background: #d3af71;
 }
 
@@ -1467,15 +1467,15 @@ section {
   margin-top: 40px;
 }
 
-.contact .php-email-form {
+.contact .add-form {
   width: 100%;
 }
 
-.contact .php-email-form .form-group {
+.contact .add-form .form-group {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form .validate {
+.contact .add-form .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
@@ -1483,7 +1483,7 @@ section {
   font-size: 13px;
 }
 
-.contact .php-email-form .error-message {
+.contact .add-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -1492,7 +1492,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .sent-message {
+.contact .add-form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1501,13 +1501,13 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contact .add-form .loading {
   display: none;
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loading:before {
+.contact .add-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1520,40 +1520,39 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input, .contact .php-email-form textarea {
-  border-radius: 0;
+.contact .add-form input, .contact .add-form select, .contact .add-form textarea {
   box-shadow: none;
   font-size: 14px;
-  background: #0c0b09;
+  background-color: #0e1528;
   border-color: #625b4b;
   color: white;
 }
 
-.contact .php-email-form input::-webkit-input-placeholder, .contact .php-email-form textarea::-webkit-input-placeholder {
+.contact .add-form input::-webkit-input-placeholder, .contact .add-form textarea::-webkit-input-placeholder {
   color: #a49b89;
 }
 
-.contact .php-email-form input::-moz-placeholder, .contact .php-email-form textarea::-moz-placeholder {
+.contact .add-form input::-moz-placeholder, .contact .add-form textarea::-moz-placeholder {
   color: #a49b89;
 }
 
-.contact .php-email-form input::placeholder, .contact .php-email-form textarea::placeholder {
+.contact .add-form input::placeholder, .contact .add-form textarea::placeholder {
   color: #a49b89;
 }
 
-.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+.contact .add-form input:focus, .contact .add-form textarea:focus {
   border-color: #cda45e;
 }
 
-.contact .php-email-form input {
-  height: 44px;
+.contact .add-form input {
+  /*height: 44px;*/
 }
 
-.contact .php-email-form textarea {
+.contact .add-form textarea {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type="submit"] {
+.contact .add-form button[type="submit"] {
   background: #cda45e;
   border: 0;
   padding: 10px 35px;
@@ -1562,7 +1561,7 @@ section {
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
+.contact .add-form button[type="submit"]:hover {
   background: #d3af71;
 }
 
