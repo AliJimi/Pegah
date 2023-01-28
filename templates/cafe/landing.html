@@ -7,18 +7,18 @@
         <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
             <div class="row">
                 <div class="col-lg-8">
-                    <h1>Welcome to <span>Restaurantly</span></h1>
+                    <h1>به <span>{{ APP_NAME }}</span> خوش آمدید</h1>
                     <h2>Delivering great food for more than 18 years!</h2>
 
                     <div class="btns">
-                        <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
-                        <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Book a Table</a>
+                        <a href="{% url 'cafe-menu' %}" class="btn-menu animated fadeInUp scrollto">مشاهده منو</a>
+                        <a href="{% url 'cafe-reservation' %}" class="btn-book animated fadeInUp scrollto">رزرو میز</a>
                     </div>
                 </div>
                 <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative"
                      data-aos="zoom-in"
                      data-aos-delay="200">
-{#                    <a href="https://www.youtube.com/watch?v=GlrxcuEDyF8" class="glightbox play-btn"></a>#}
+                    <a href="https://www.youtube.com/watch?v=GlrxcuEDyF8" class="glightbox play-btn"></a>
                 </div>
 
             </div>
@@ -550,7 +550,8 @@
                                 risus at semper.
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
-                            <img src="{% static 'img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                            <img src="{% static 'img/testimonials/testimonials-1.jpg' %}" class="testimonial-img"
+                                 alt="">
                             <h3>Saul Goodman</h3>
                             <h4>Ceo &amp; Founder</h4>
                         </div>
@@ -565,7 +566,8 @@
                                 legam anim culpa.
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
-                            <img src="{% static 'img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                            <img src="{% static 'img/testimonials/testimonials-2.jpg' %}" class="testimonial-img"
+                                 alt="">
                             <h3>Sara Wilsson</h3>
                             <h4>Designer</h4>
                         </div>
@@ -579,7 +581,8 @@
                                 duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
-                            <img src="{% static 'img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                            <img src="{% static 'img/testimonials/testimonials-3.jpg' %}" class="testimonial-img"
+                                 alt="">
                             <h3>Jena Karlis</h3>
                             <h4>Store Owner</h4>
                         </div>
@@ -594,7 +597,8 @@
                                 labore illum veniam.
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
-                            <img src="{% static 'img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                            <img src="{% static 'img/testimonials/testimonials-4.jpg' %}" class="testimonial-img"
+                                 alt="">
                             <h3>Matt Brandon</h3>
                             <h4>Freelancer</h4>
                         </div>
@@ -609,7 +613,8 @@
                                 culpa fore nisi cillum quid.
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
-                            <img src="{% static 'img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                            <img src="{% static 'img/testimonials/testimonials-5.jpg' %}" class="testimonial-img"
+                                 alt="">
                             <h3>John Larson</h3>
                             <h4>Entrepreneur</h4>
                         </div>
@@ -638,7 +643,8 @@
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="{% static 'img/gallery/gallery-1.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                        <a href="{% static 'img/gallery/gallery-1.jpg' %}" class="gallery-lightbox"
+                           data-gall="gallery-item">
                             <img src="{% static 'img/gallery/gallery-1.jpg' %}" alt="" class="img-fluid">
                         </a>
                     </div>
@@ -646,7 +652,8 @@
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="{% static 'img/gallery/gallery-2.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                        <a href="{% static 'img/gallery/gallery-2.jpg' %}" class="gallery-lightbox"
+                           data-gall="gallery-item">
                             <img src="{% static 'img/gallery/gallery-2.jpg' %}" alt="" class="img-fluid">
                         </a>
                     </div>
@@ -654,7 +661,8 @@
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="{% static 'img/gallery/gallery-3.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                        <a href="{% static 'img/gallery/gallery-3.jpg' %}" class="gallery-lightbox"
+                           data-gall="gallery-item">
                             <img src="{% static 'img/gallery/gallery-3.jpg' %}" alt="" class="img-fluid">
                         </a>
                     </div>
@@ -662,7 +670,8 @@
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="{% static 'img/gallery/gallery-4.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                        <a href="{% static 'img/gallery/gallery-4.jpg' %}" class="gallery-lightbox"
+                           data-gall="gallery-item">
                             <img src="{% static 'img/gallery/gallery-4.jpg' %}" alt="" class="img-fluid">
                         </a>
                     </div>
@@ -670,7 +679,8 @@
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="{% static 'img/gallery/gallery-5.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                        <a href="{% static 'img/gallery/gallery-5.jpg' %}" class="gallery-lightbox"
+                           data-gall="gallery-item">
                             <img src="{% static 'img/gallery/gallery-5.jpg' %}" alt="" class="img-fluid">
                         </a>
                     </div>
@@ -678,7 +688,8 @@
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="{% static 'img/gallery/gallery-6.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                        <a href="{% static 'img/gallery/gallery-6.jpg' %}" class="gallery-lightbox"
+                           data-gall="gallery-item">
                             <img src="{% static 'img/gallery/gallery-6.jpg' %}" alt="" class="img-fluid">
                         </a>
                     </div>
@@ -686,7 +697,8 @@
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="{% static 'img/gallery/gallery-7.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                        <a href="{% static 'img/gallery/gallery-7.jpg' %}" class="gallery-lightbox"
+                           data-gall="gallery-item">
                             <img src="{% static 'img/gallery/gallery-7.jpg' %}" alt="" class="img-fluid">
                         </a>
                     </div>
@@ -694,7 +706,8 @@
 
                 <div class="col-lg-3 col-md-4">
                     <div class="gallery-item">
-                        <a href="{% static 'img/gallery/gallery-8.jpg' %}" class="gallery-lightbox" data-gall="gallery-item">
+                        <a href="{% static 'img/gallery/gallery-8.jpg' %}" class="gallery-lightbox"
+                           data-gall="gallery-item">
                             <img src="{% static 'img/gallery/gallery-8.jpg' %}" alt="" class="img-fluid">
                         </a>
                     </div>

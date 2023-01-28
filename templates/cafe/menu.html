@@ -45,8 +45,7 @@
             $.getJSON("{% url 'cafe-menu-courses-api' %}", function (data) {
                 let divs = createMenu(data);
                 menuItems.html(divs);
-                console.log(divs);
-            })
+            });
         });
     </script>
 {% endblock %}

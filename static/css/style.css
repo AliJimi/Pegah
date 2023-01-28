@@ -931,7 +931,7 @@ section {
 
 .menu .menu-img {
   max-width: 70px;
-  border-radius: 50%;
+  border-radius: 30%;
   float: left;
   border: 3px solid rgba(255, 255, 255, 0.2);
 }
