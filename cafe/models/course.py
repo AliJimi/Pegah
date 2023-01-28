@@ -105,3 +105,17 @@ def get_courses():
         "smoothie": {'name': 'اسموتی', 'class': Smoothie},
         "salad": {'name': 'سالاد', 'class': Salad},
     }
+
+
+def get_course_class(course: str):
+    for c, v in get_courses().items():
+        if v['name'] == course:
+            return v['class']
+    return None
+
+
+def add_course_row(course, name, description, price, image):
+    course_obj = course(
+        name=name, image=image, description=description, price=price
+    )
+    course_obj.save()

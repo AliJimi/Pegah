@@ -14,7 +14,10 @@
         <div class="container" data-aos="fade-up">
             <div class="row mt-5">
                 <div class="col-12 mt-5 mt-lg-0">
-                    <form method="post" role="form" class="add-form" enctype="multipart/form-data">
+                    <form method="post" role="form" class="add-form" enctype="multipart/form-data" id="add-course-form">
+                        <div class="row">
+                            {#                            {{ c.as_p }}#}
+                        </div>
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 <input type="text" name="name" class="form-control" id="name"
@@ -29,16 +32,23 @@
                                     {% endfor %}
                                 </select>
                             </div>
-                        </div>
-                        <div class="form-group mt-3">
-                            <div class="mb-3">
-                                <label for="image" class="form-label">عکس وعده غذایی</label>
-                                <input class="form-control" type="file" id="image" required>
+                            <div class="col-md-6 form-group">
+                                <input type="number" name="price" class="form-control" id="price"
+                                       placeholder="قیمت (مثلاً 29 تومان)"
+                                       required>
                             </div>
                         </div>
                         <div class="form-group mt-3">
-                            <textarea class="form-control" name="description" id="description" rows="8" placeholder="توضیحات وعده غذایی"
-                                      ></textarea>
+                            <div class="mb-3">
+                                <label for="id_image" class="form-label">عکس وعده غذایی</label>
+                                <input type="file" name="image" id="id_image" accept="image/*" class="form-control"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="description" id="description" rows="8"
+                                      placeholder="توضیحات وعده غذایی"
+                            ></textarea>
                         </div>
                         {% csrf_token %}
                         <div class="text-center">
@@ -49,4 +59,32 @@
             </div>
         </div>
     </section>
+{% endblock %}
+
+{% block end_scripts %}
+    <script>
+        $(document).ready(function () {
+            $("#add-course-form").submit(function (e) {
+                e.preventDefault();
+                let data = new FormData(this);
+
+                $.ajax({
+                    type: 'POST',
+                    {#url: "{% url 'phishing_detection-check-mavara_file_upload' %}",#}
+                    data: data,
+                    processData: false,
+                    contentType: false,
+
+                    statusCode: {
+                        200: function (data) {
+                            toastr.success(data);
+                        },
+                        400: function (data) {
+                            toastr.warning(data);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 {% endblock %}

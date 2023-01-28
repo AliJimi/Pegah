@@ -14,125 +14,22 @@
                 <div class="col-lg-12 d-flex justify-content-center">
                     <ul id="menu-flters">
                         <li data-filter="*" class="filter-active">همه‌ی غذاها</li>
-                        <li data-filter=".filter-coffee">قهوه</li>
-                        <li data-filter=".filter-cold-drink">نوشیدنی سرد</li>
-                        <li data-filter=".filter-hot-dring">نوشیدنی گرم</li>
-                        <li data-filter=".filter-milkshake">شیک</li>
-                        <li data-filter=".filter-appetizer">دسر</li>
-                        <li data-filter=".filter-smoothie">اسموتی</li>
-                        <li data-filter=".filter-tea">چای</li>
-                        <li data-filter=".filter-breakfast">صبحانه</li>
-                        <li data-filter=".filter-main-course">غذای اصلی</li>
-                        <li data-filter=".filter-appetizer-salad">پیش‌غذا و سالاد</li>
+                        <li data-filter=".filter-coffees">قهوه</li>
+                        <li data-filter=".filter-cold_drinks">نوشیدنی سرد</li>
+                        <li data-filter=".filter-hot_drinks">نوشیدنی گرم</li>
+                        <li data-filter=".filter-milkshakes">شیک</li>
+                        <li data-filter=".filter-desserts">دسر</li>
+                        <li data-filter=".filter-smoothies">اسموتی</li>
+                        <li data-filter=".filter-teas">چای</li>
+                        <li data-filter=".filter-breakfasts">صبحانه</li>
+                        <li data-filter=".filter-main_courses">غذای اصلی</li>
+                        <li data-filter=".filter-appetizers">پیش‌غذا</li>
+                        <li data-filter=".filter-salads">سالاد</li>
                     </ul>
                 </div>
             </div>
 
             <div class="row menu-container" data-aos="fade-up" data-aos-delay="200" id="menu-items">
-                <!-- Coffee -->
-                {% for coffee in coffees %}
-
-                {% endfor %}
-
-                <div class="col-lg-6 menu-item filter-coffee">
-                    <img src="{% static 'img/menu/lobster-bisque.jpg' %}" class="menu-img" alt="">
-                    <div class="menu-content">
-                        <a href="#">Lobster Bisque</a><span>$5.95</span>
-                    </div>
-                    <div class="menu-ingredients">
-                        Lorem, deren, trataro, filede, nerada
-                    </div>
-                </div>
-
-                <div class="col-lg-6 menu-item filter-starters">
-                    <img src="{% static 'img/menu/lobster-bisque.jpg' %}" class="menu-img" alt="">
-                    <div class="menu-content">
-                        <a href="#">Lobster Bisque</a><span>$5.95</span>
-                    </div>
-                    <div class="menu-ingredients">
-                        Lorem, deren, trataro, filede, nerada
-                    </div>
-                </div>
-
-                <div class="col-lg-6 menu-item filter-specialty">
-                    <img src="{% static 'img/menu/bread-barrel.jpg' %}" class="menu-img" alt="">
-                    <div class="menu-content">
-                        <a href="#">Bread Barrel</a><span>$6.95</span>
-                    </div>
-                    <div class="menu-ingredients">
-                        Lorem, deren, trataro, filede, nerada
-                    </div>
-                </div>
-
-                <div class="col-lg-6 menu-item filter-starters">
-                    <img src="{% static 'img/menu/cake.jpg' %}" class="menu-img" alt="">
-                    <div class="menu-content">
-                        <a href="#">Crab Cake</a><span>$7.95</span>
-                    </div>
-                    <div class="menu-ingredients">
-                        A delicate crab cake served on a toasted roll with lettuce and tartar sauce
-                    </div>
-                </div>
-
-                <div class="col-lg-6 menu-item filter-salads">
-                    <img src="{% static 'img/menu/caesar.jpg' %}" class="menu-img" alt="">
-                    <div class="menu-content">
-                        <a href="#">Caesar Selections</a><span>$8.95</span>
-                    </div>
-                    <div class="menu-ingredients">
-                        Lorem, deren, trataro, filede, nerada
-                    </div>
-                </div>
-
-                <div class="col-lg-6 menu-item filter-specialty">
-                    <img src="{% static 'img/menu/tuscan-grilled.jpg' %}" class="menu-img" alt="">
-                    <div class="menu-content">
-                        <a href="#">Tuscan Grilled</a><span>$9.95</span>
-                    </div>
-                    <div class="menu-ingredients">
-                        Grilled chicken with provolone, artichoke hearts, and roasted red pesto
-                    </div>
-                </div>
-
-                <div class="col-lg-6 menu-item filter-starters">
-                    <img src="{% static 'img/menu/mozzarella.jpg' %}" class="menu-img" alt="">
-                    <div class="menu-content">
-                        <a href="#">Mozzarella Stick</a><span>$4.95</span>
-                    </div>
-                    <div class="menu-ingredients">
-                        Lorem, deren, trataro, filede, nerada
-                    </div>
-                </div>
-
-                <div class="col-lg-6 menu-item filter-salads">
-                    <img src="{% static 'img/menu/greek-salad.jpg' %}" class="menu-img" alt="">
-                    <div class="menu-content">
-                        <a href="#">Greek Salad</a><span>$9.95</span>
-                    </div>
-                    <div class="menu-ingredients">
-                        Fresh spinach, crisp romaine, tomatoes, and Greek olives
-                    </div>
-                </div>
-
-                <div class="col-lg-6 menu-item filter-salads">
-                    <img src="{% static 'img/menu/spinach-salad.jpg' %}" class="menu-img" alt="">
-                    <div class="menu-content">
-                        <a href="#">Spinach Salad</a><span>$9.95</span>
-                    </div>
-                    <div class="menu-ingredients">
-                        Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
-                    </div>
-                </div>
-
-                <div class="col-lg-6 menu-item filter-specialty">
-                    <img src="{% static 'img/menu/lobster-roll.jpg' %}" class="menu-img" alt="">
-                    <div class="menu-content">
-                        <a href="#">Lobster Roll</a><span>$12.95</span>
-                    </div>
-                    <div class="menu-ingredients">
-                        Plump lobster meat, mayo and crisp lettuce on a toasted bulky roll
-                    </div>
-                </div>
 
             </div>
 
@@ -141,11 +38,15 @@
 {% endblock %}
 {% block end_scripts %}
 <script src="{% static 'cafe/menu.js' %}"></script>
+<script src="{% static 'utilities/decimal.js' %}"></script>
     <script>
         $(document).ready(function () {
-            console.log('AA');
             let menuItems = $("#menu-items");
-            $.getJSON({% url 'cafe-menu-courses-api' %})
+            $.getJSON("{% url 'cafe-menu-courses-api' %}", function (data) {
+                let divs = createMenu(data);
+                menuItems.html(divs);
+                console.log(divs);
+            })
         });
     </script>
 {% endblock %}
