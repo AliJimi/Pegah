@@ -1,9 +1,10 @@
 from django.contrib.auth.decorators import login_required
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
+from django.views.generic import CreateView
 
 from Pegah.messages import cafe_messages
-from cafe.models.course import get_available_courses, get_courses, get_course_class, add_course_row
+from cafe.models.course import get_available_courses, get_courses, get_course_class, add_course_row, Course
 
 
 def menu_view(request):
@@ -35,3 +36,8 @@ def add_course(request):
         'courses': [course['name'] for _, course in courses_dict.items()],
     })
 
+
+class CourseCreateView(CreateView):
+    model = Course
+    fields = ['name', 'description', 'price', 'image']
+    template_name = 'cafe/course/add.html'
