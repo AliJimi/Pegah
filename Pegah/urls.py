@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import RedirectView
 
 from Pegah.settings import MEDIA_URL, MEDIA_ROOT
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cafe/', include('cafe.urls', namespace='cafe')),
+    path('', RedirectView.as_view(url='cafe/landing/', permanent=False), name='index'),
 ] + static(MEDIA_URL, document_root=MEDIA_ROOT)
