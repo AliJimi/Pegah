@@ -18,5 +18,5 @@ urlpatterns = [
 
     path('reservation/', reservation_view, name='reservation'),
 
-    path('a/add/', CourseCreateView.as_view(), name='reservation'),
+    path('a/add/', CourseCreateView.as_view(), name='reservation2'),
 ]

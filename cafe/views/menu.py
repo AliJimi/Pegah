@@ -16,7 +16,7 @@ def menu_courses_api(request):
     return JsonResponse(courses, safe=False)
 
 
-@login_required(login_url='/login/')
+@login_required(login_url='/admin/login/')
 def add_course(request):
     courses_dict = get_courses()
     if request.method == "POST":
