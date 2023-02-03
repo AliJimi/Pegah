@@ -42,7 +42,7 @@
     <script>
         $(document).ready(function () {
             let menuItems = $("#menu-items");
-            $.getJSON("{% url 'cafe-menu-courses-api' %}", function (data) {
+            $.getJSON("{% url 'cafe:menu-courses-api' %}", function (data) {
                 let divs = createMenu(data);
                 menuItems.html(divs);
             });
