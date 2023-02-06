@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # external apps
+    'qr_code',
+
+    # apps
     'cafe',
 ]
 
