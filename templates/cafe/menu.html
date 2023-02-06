@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-    <section id="menu" class="menu section-bg" style="padding-top: 120px;">
+    <section id="menu" class="menu section-bg" style="padding-top: 120px; min-height: 800px">
         <div class="container" data-aos="fade-up">
 
             <div class="section-title">
@@ -28,8 +28,8 @@
                     </ul>
                 </div>
             </div>
-
-            <div class="row menu-container" data-aos="fade-up" data-aos-delay="200" id="menu-items">
+            <div class="row menu-container aos-init aos-animate" data-aos="fade-up" data-aos-delay="200"
+                 style="position: relative; height: 600px;" id="menu-items">
 
             </div>
 
@@ -37,8 +37,8 @@
     </section><!-- End Menu Section -->
 {% endblock %}
 {% block end_scripts %}
-<script src="{% static 'cafe/menu.js' %}"></script>
-<script src="{% static 'utilities/decimal.js' %}"></script>
+    <script src="{% static 'cafe/menu.js' %}"></script>
+    <script src="{% static 'utilities/decimal.js' %}"></script>
     <script>
         $(document).ready(function () {
             let menuItems = $("#menu-items");
