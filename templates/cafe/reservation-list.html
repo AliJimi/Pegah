@@ -1,0 +1,79 @@
+{% extends 'cafe/base.html' %}
+{% load static %}
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <section id="reserve" class="contact">
+        <div class="container" data-aos="fade-up">
+
+            <div class="section-title">
+                <h2>رزرو</h2>
+                <p>رزرو میز</p>
+            </div>
+        </div>
+        <div class="container" data-aos="fade-up">
+            <div class="row mt-5">
+                <div class="col-12 mt-5 mt-lg-0">
+                    <form method="post" role="form" class="add-form" enctype="multipart/form-data" id="add-course-form">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" class="form-control" id="name"
+                                       placeholder="نام شما"
+                                       required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="number" name="price" class="form-control" id="price"
+                                       placeholder="تعداد نفرات"
+                                       required>
+                            </div>
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea class="form-control" name="description" id="description" rows="8"
+                                      placeholder="توضیحات رزرو"
+                            ></textarea>
+                        </div>
+                        {% csrf_token %}
+                        <div class="text-center">
+                            <button type="submit">ثبت</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block end_scripts %}
+    <script>
+        $(document).ready(function () {
+            const successAudio = new Audio("{% static 'sounds/chime.mp3' %}");
+            const failAudio = new Audio("{% static 'sounds/alert.mp3' %}")
+            let fetchList = window.setInterval(function(){
+                successAudio.play();
+            }, 5000);
+
+            $("#add-course-form").submit(function (e) {
+                e.preventDefault();
+                let data = new FormData(this);
+
+                $.ajax({
+                    type: 'POST',
+                    {#url: "{% url 'phishing_detection-check-mavara_file_upload' %}",#}
+                    data: data,
+                    processData: false,
+                    contentType: false,
+
+                    statusCode: {
+                        200: function (data) {
+                            toastr.success(data);
+                        },
+                        400: function (data) {
+                            toastr.warning(data);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}
