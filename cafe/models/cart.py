@@ -15,3 +15,4 @@ class Cart(models.Model):
 class CartItem(models.Model):
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    course_count = models.PositiveSmallIntegerField(null=False, blank=False, default=1, max_length=3)
