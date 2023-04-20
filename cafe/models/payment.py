@@ -2,6 +2,7 @@ from django.db import models
 
 from cafe.models.reservation import Reserve
 from django.contrib.sessions.models import Session
+from cafe.models.cart import Cart
 
 
 class Payment(models.Model):
@@ -21,10 +22,11 @@ class PaymentReserve(Payment):
     reservation = models.ForeignKey(Reserve, on_delete=models.CASCADE)
 
 
-class PymentCourse(Payment):
+class PaymentCourse(Payment):
     need_delivery = models.BooleanField(blank=False, default=False)
     need_table = models.BooleanField(blank=False, default=True)
     is_done = models.BooleanField(blank=False, default=False)
     start_date = models.DateTimeField(blank=False, null=True)
     is_accepted = models.BooleanField(blank=False, null=True)
     address = models.TextField(blank=False, null=True)
+    course_payment = models.ForeignKey(Cart, null=False, blank=False, on_delete=models.CASCADE)
