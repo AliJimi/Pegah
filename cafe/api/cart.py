@@ -23,12 +23,21 @@ def add_to_cart(session: Session, course_id):
             session=session,
             course=course
         ).save()
-    return cart_item.to_json()
+    return cart_item
 
 
-def empty_cart():
-    pass
+def empty_cart(session: Session):
+    try:
+        cart = Cart.objects.get(session=session).delete()
+        return True
+    except:
+        return False
 
 
-def remove_from_cart():
-    pass
+def remove_from_cart(cart_item_id:int):
+    try:
+        cart_item = CartItem.objects.get(id=cart_item_id).delete()
+        return True
+    except:
+        return False
+
