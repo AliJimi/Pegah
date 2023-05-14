@@ -20,7 +20,7 @@ def add_to_cart(session: Session, course_id):
         cart_item.add_to_course_count()
     except:
         cart_item = CartItem(
-            session=session,
+            cart=cart,
             course=course
         ).save()
     return cart_item
