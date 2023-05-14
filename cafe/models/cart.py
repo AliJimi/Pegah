@@ -22,6 +22,10 @@ class CartItem(models.Model):
         self.course_count += 1
         self.save()
 
+    def reduce_course_count(self):
+        self.course_count -= 1
+        self.save()
+
     def to_json(self):
         return {
             'course_count': self.course_count,
