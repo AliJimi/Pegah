@@ -7,6 +7,7 @@ from cafe.models.course import Course
 class Cart(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     session = models.ForeignKey(Session, on_delete=models.CASCADE)
+    is_paid = models.BooleanField(blank=False, null=False, default=False)
 
     def to_json(self):
         pass
