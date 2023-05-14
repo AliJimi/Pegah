@@ -34,9 +34,15 @@ def empty_cart(session: Session):
         return False
 
 
-def remove_from_cart(cart_item_id: int):
+def remove_from_cart(cart_item_id: int, mode: int = 0):
+    reduced_cart_item = 0
     try:
-        cart_item = CartItem.objects.get(id=cart_item_id).delete()
+        cart_item = CartItem.objects.get(id=cart_item_id)
+        if mode is 0:
+            reduced_cart_item = cart_item.reduce_course_count()
+
+        if mode is 1 or reduced_cart_item is 0:
+            cart_item.delete()
         return True
     except:
         return False
