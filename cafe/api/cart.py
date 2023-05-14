@@ -34,10 +34,19 @@ def empty_cart(session: Session):
         return False
 
 
-def remove_from_cart(cart_item_id:int):
+def remove_from_cart(cart_item_id: int):
     try:
         cart_item = CartItem.objects.get(id=cart_item_id).delete()
         return True
     except:
         return False
 
+
+def make_cart_payment(session: Session):
+    try:
+        cart = Cart.objects.get(session=Session, is_paid=False)
+    except:
+        return False
+    cart.is_paid = None
+    cart.save()
+    return cart
